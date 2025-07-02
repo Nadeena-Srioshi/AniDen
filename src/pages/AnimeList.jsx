@@ -1,8 +1,23 @@
+import { AnimeCard } from "../components";
+import { AnimeQuote } from "../components";
+import { useFetch } from "../hooks/useFetch";
 
-export const AnimeList = () => {
+import backupPic from "../assets/images/backup.png"
+
+export const AnimeList = ({status}) => {
+  const {data: animes} = useFetch(status);
+
   return (
        <main>
-              <div className="text-red-800">AnimeList</div>
+          <section className="flex justify-center my-3">
+            <AnimeQuote />
+          </section>
+
+          <section className="flex justify-center flex-wrap my-5">
+            {animes.map((anime) => (
+              <AnimeCard coverImage={anime.coverImage.extraLarge} title={anime.title.romaji} key={anime.id}/>
+            ))}
+          </section>
               
 
        </main>
