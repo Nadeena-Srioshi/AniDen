@@ -4,7 +4,7 @@ import logo from "../assets/icon.jpg";
 export const Footer = () => {
 
   return (
-    <footer className="bg-white shadow-sm dark:bg-gray-900">
+    <footer className="bg-white shadow-sm dark:bg-gray-900 border-t-2 border-gray-200 dark:border-gray-900">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div className="sm:flex sm:items-center sm:justify-between">
                 <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -27,7 +27,7 @@ export const Footer = () => {
                 </ul>
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <Link to="/" className="hover:underline">AniDen™</Link>. All Rights Reserved.</span>
+            <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <Link to="/" className="hover:underline">AniDen</Link>. All Rights Reserved. Developed by Nadeena Srioshi.</span>
         </div>
     </footer>
 

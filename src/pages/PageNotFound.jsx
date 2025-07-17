@@ -8,6 +8,11 @@ export const PageNotFound = () => {
     document.title = `Page Not Found / Cinemate`;
   });
 
+  useEffect(() => {
+    document.title = `Page Not Found / AniDen`;
+  })
+  const pageTitle = useTitle("Page Not Found");
+
   return (
     <main>
       <section className="flex flex-col justify-center px-2">
@@ -19,7 +24,7 @@ export const PageNotFound = () => {
         </div>
         <div className="flex justify-center my-4">
           <Link to="/">
-            <Button>Back To Cinemate</Button>
+            <Button>Back To AniDen</Button>
           </Link>          
         </div>
       </section>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-
+import { useTitle } from "../hooks/useTitle";
 export const useDetail = (id) => {
   const [data, setData] = useState({});
-  
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const query = `
       query ($mediaId: Int) {
@@ -13,16 +14,27 @@ export const useDetail = (id) => {
           title {
             romaji
           }
-          description
-          genres
+          format
           episodes
+          genres
           popularity
+          status
+          description
+          averageScore
+          studios {
+            nodes {
+              name
+            }
+          }
+          startDate {
+            year
+          }
         }
       }
     `;
 
     const variables = { mediaId: Number(id) };
-    
+
 console.log("inside useDetail");
 console.log("useDetail id : " + id);
 
@@ -31,7 +43,7 @@ console.log("useDetail id : " + id);
       console.warn("Invalid ID — skipping fetch", id);
       return;
     }
-
+    setLoading(true);
     console.log("🟢 useEffect running with ID:", id);
 
     
@@ -45,14 +57,17 @@ console.log("useDetail id : " + id);
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log("✅ API response:", json);
+        console.log(json);
         setData(json.data.Media);
+        //useTitle(json.data.Media.title.romaji);
+        setError(null);
       })
       .catch((err) => {
-        console.error("❌ Fetch error:", err);
-      });
-
+        setError(err);
+        setData(null);
+      })
+      .finally(() => setLoading(false));
   }, [id]);
-
-  return { data };
+  
+  return { data, loading, error };
 };
