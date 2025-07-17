@@ -15,7 +15,7 @@ export const AnimeList = ({status}) => {
 
           <section className="flex justify-center flex-wrap my-5">
             {animes.map((anime) => (
-              <AnimeCard coverImage={anime.coverImage.extraLarge} title={anime.title.romaji} key={anime.id}/>
+              <AnimeCard coverImage={anime.coverImage.extraLarge} title={anime.title.romaji} id={anime.id} key={anime.id}/>
             ))}
           </section>
               

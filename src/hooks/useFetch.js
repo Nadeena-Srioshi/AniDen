@@ -4,13 +4,13 @@ export const useFetch = (status) => {
 
        const [data, setData] = useState([]);
        var query = `
-      query Query($status: MediaStatus) {
+      query Query($status: MediaStatus, $isAdult: Boolean) {
        
         Page {
           pageInfo {
             hasNextPage
           }
-        media(status: $status) {
+        media(status: $status, isAdult: $isAdult) {
        id
           coverImage {
             extraLarge
