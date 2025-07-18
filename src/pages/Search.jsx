@@ -23,7 +23,7 @@ export const Search = () => {
 
           <section className="flex justify-center flex-wrap my-5">
             {animes.map((anime) => (
-              <AnimeCard coverImage={anime.coverImage.extraLarge || backupPic} title={anime.title.romaji} id={anime.id} key={anime.id}/>
+              <AnimeCard anime={anime} key={anime.id}/>
             ))}
           </section>
               
