@@ -60,7 +60,7 @@ if (loading) return (
             </div>
             
             {/* Content Section */}
-            <div className="sm:w-2/3 xl:w-3/4 p-8">
+            <div className="sm:w-2/3 xl:w-3/4 px-8 py-8 sm:py-0">
               <div className="space-y-6">
                 {/* Title */}
                 <div className="border-b border-gray-200 dark:border-gray-700 pb-4">

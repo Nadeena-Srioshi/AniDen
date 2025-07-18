@@ -19,7 +19,13 @@ export const useFetch = (status) => {
             romaji
           }
           popularity
-              genres
+          averageScore
+       episodes
+       format
+       season
+       seasonYear
+       status
+       genres
           trending
         }
         }

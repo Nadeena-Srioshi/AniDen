@@ -93,10 +93,14 @@ export const AnimeQuote = () => {
   return (
     <div className="flex  flex-col max-w-sm items-center bg-white border border-gray-200 rounded-lg shadow-sm sm:flex-row sm:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
         <img className="object-cover w-full  rounded-t-lg h-96 sm:h-full sm:w-48 sm:rounded-none sm:rounded-s-lg" src={authorImage || backupPic} alt="anime character" />
-        <div className="flex flex-col justify-between p-4 leading-normal">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{`Author: ${authorName}`}</h5>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{quote}</p>
-        </div>
+        <div className="flex flex-col justify-around h-full p-4 leading-normal">
+            <h2 className="text-2xl font-bold mb-3 dark:text-white ">Anime Quote From AOT</h2>
+            <div>
+              <h3 className="mb-2 text-xl tracking-tight text-gray-900 dark:text-white">{`Author: ${authorName}`}</h3>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{quote}</p>
+            </div>
+            </div>
+
     </div>
   )
 }
