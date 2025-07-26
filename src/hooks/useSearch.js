@@ -19,14 +19,14 @@ export const useSearch = (queryTerm) => {
               romaji
               }
               popularity
-          averageScore
-       episodes
-       format
-       season
-       seasonYear
-       status
-       genres
-          trending
+              averageScore
+              episodes
+              format
+              season
+              seasonYear
+              status
+              genres
+              trending
               }
 
               }
