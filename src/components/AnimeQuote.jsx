@@ -5,7 +5,6 @@ export const AnimeQuote = () => {
 
   const [quote, setQuote] = useState("");
   const [authorName, setAuthorName] = useState("");
-
   const [authorImage, setAuthorImage] = useState({});
 
   useEffect(() => {
