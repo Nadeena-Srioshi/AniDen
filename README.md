@@ -30,7 +30,7 @@ Notable files:
 - AOT quote REST endpoint: GET https://aot-api.vercel.app/quote — used for random quotes.
 
 ## Setup & Run (Windows)
-1. Clone repository to: c:\Users\Hp\OneDrive\Desktop\React\aniden  
+1. Clone repository
 2. Open terminal in that folder (PowerShell/CMD/WSL).  
 3. Install dependencies:
    npm install
